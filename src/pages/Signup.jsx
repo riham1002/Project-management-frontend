@@ -1,10 +1,11 @@
-function Admin(props){
+function SignUp(props){
     return(
         <div>
+           
             <h1>
-                Admin
+               SignUp
             </h1>
         </div>
     )
 }
-export default Admin;
+export default SignUp;

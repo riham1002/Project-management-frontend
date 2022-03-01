@@ -10,12 +10,17 @@ const submitLogin=(e)=>{
     method:"post",
     body:JSON.stringify(loginData),
     headers: { 'content-type': 'application/json' },
-    // credentials:"include"
+    credentials:"include"
 
   })
   .then(res=>res.json()).then(data=>{
    if(data.success)
-    console.log("hello");
+   {
+    
+      window.location.href = `http://localhost:3000/home`;
+    }else{
+      alert("username or password is incorrect")
+    }
   })
 
 }

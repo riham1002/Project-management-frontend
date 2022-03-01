@@ -2,7 +2,7 @@ function Home(props){
     return(
         <div>
             <nav className="buttons">
-      <a id="home" className="homeButton" href="/">Home</a>
+      {/* <a id="home" className="homeButton" href="/">Home</a> */}
       
       <a id="logout" className="logoutButton" href="/">logout</a>
 </nav>

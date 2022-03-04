@@ -23,7 +23,7 @@ setSignupData({...signupData, [key]:value})
          }
     return(
         <div>
-           
+          <a href="/">back</a> 
             <h1>
                Please Sign Up
             </h1>

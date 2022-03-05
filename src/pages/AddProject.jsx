@@ -1,5 +1,8 @@
 
 import React, { useState } from 'react';
+import "./login.css";
+import"./login.css"
+
 
 
 function AddProject() {
@@ -60,19 +63,21 @@ function AddProject() {
 
     return (
         <div>
-<a href="/home">back</a>
+
+<button className="backButton"><a href="/home">back</a> </button>
+<div className='addProjectStyle'>
             <h1>
                 Add Project
             </h1>
             <div>
             
-                <label>Project Name</label>
-                <input type={"text"} onChange={(v) => projectHandler("project_name", v.target.value)} /> <br></br><br></br>
+                <label className='label'>  </label>
+                <input className='input' type={"text"} placeholder="project name" required onChange={(v) => projectHandler("project_name", v.target.value)} /> <br></br><br></br>
                
                 {inputList.map((item, i) => {
                     return (
                         <div key={i}>
-                            <label>Tasks</label> <input type={"text"} name="task" placeholder="task" onChange={e => handleChange(e, i)} />
+                            <label className='label'>  </label> <input className='input' type={"text"} name="task" placeholder="task" required onChange={e => handleChange(e, i)} />
                             {inputList.length - 1 === i && <input type="button" value="add" onClick={handleAddInput} />}
                             {inputList.length !== 1 && <input type="button" value="remove" onClick={() => handleRemoveInput(i)} />}
 
@@ -84,16 +89,17 @@ function AddProject() {
 
                 }
                 )}
-                <label>Start at</label>
-                <input type={"Date"} onChange={(v) => projectHandler("start_at", v.target.value)} />
-                <label>End at</label>
-                <input type={"Date"} onChange={(v) => projectHandler("end_at", v.target.value)} /><br></br>
+                <label className='label'>Start at  </label>
+                <input className='input' type={"Date"} required onChange={(v) => projectHandler("start_at", v.target.value)} /><br></br>
+                <label className='label'>End at  </label>
+                <input  className='input' type={"Date"} required onChange={(v) => projectHandler("end_at", v.target.value)} /><br></br>
 
                 <br></br>
-                <button onClick={submitProject} >Add Project </button>
+                <button className='submitButton' onClick={submitProject} >Add Project </button>
                 
             </div>
 
+        </div>
         </div>
     )
 }

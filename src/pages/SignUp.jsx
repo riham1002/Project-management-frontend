@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./login.css";
 
 function Signup(props){
     const [signupData, setSignupData]= useState({username:"", password:""})
@@ -22,18 +23,20 @@ setSignupData({...signupData, [key]:value})
          
          }
     return(
-        <div>
-          <a href="/">back</a> 
+        <div >
+          <button className="backButton"><a href="/">back</a> </button>
+          <div className="signupStyle">
             <h1>
                Please Sign Up
             </h1>
-            <div>
-                <label>User Name</label>
-                <input type={"text"}  onChange={(v)=>signupHandler("username", v.target.value)}/> <br></br><br></br>
-                <label>Password</label>
-                <input type={"password"} onChange={(v)=>signupHandler("password", v.target.value)} />
-                <button  onClick={submitSignup}>sign up </button>
+            <div >
+                <label className="label"> </label>
+                <input className="username" placeholder="username" type={"text"} required onChange={(v)=>signupHandler("username", v.target.value)}/> <br></br><br></br>
+                <label className="label"></label>
+                <input  className="password" placeholder="password" type={"password"} required onChange={(v)=>signupHandler("password", v.target.value)} /><br></br><br></br>
+                <button className="submitButton"  onClick={submitSignup}>sign up </button>
             </div>
+        </div>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./login.css";
 
 function Login(props){
   const [loginData, setLoginData]= useState({username:"", password:""})
@@ -28,28 +29,32 @@ const submitLogin=(e)=>{
     return(
         <div>
 
-           <h1>Please log in</h1>
-      <input
+           <h1>Welcome to The Project Management System</h1>
+           <div className="loginstyle">
+           <h2> Please Login</h2>
+     <label className="label" ></label> <input
         type="text"
         className="username"
         id="username"
         placeholder="username"
         required
         onChange={(v)=>loginHandler("username", v.target.value)}
-      />
-      <input
+      /><br></br><br></br>
+      <label className="label"></label> <input
         type="password"
         className="password"
         id="password"
         placeholder="password"
         required
         onChange={(v)=>loginHandler("password", v.target.value)}
-      />
-      <input type="submit" value="login" id="login" required onClick={submitLogin}/>
+      /><br></br><br></br>
+      <input className="submitButton" type="submit" value="login" id="login" required onClick={submitLogin}/>
 
       <output></output>
+      <br></br>
 
     <a id="signUp" className="signUp" href="/signUp">Sign up</a>
+        </div>
         </div>
     )
 }

@@ -1,0 +1,13 @@
+body {
+  background: rgb(63, 47, 100);
+  background: -moz-linear-gradient(
+    left,
+    rgb(100, 47, 97) 0%,
+    rgb(206, 37, 60) 100%
+  );
+}
+
+.addImg {
+  height: 40px;
+  width: 40px;
+}

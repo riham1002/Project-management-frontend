@@ -1,4 +1,4 @@
-
+import "../App.css";
 import React, { useEffect, useState } from 'react';
 import { FaTimes } from "react-icons/fa";
 function Project() {
@@ -40,27 +40,32 @@ function Project() {
 
 
     return (
-        <div>
+        <div className="projectStyle">
 
             {prijectsArr.map(project => {
                 return (
+                    <div class="column">
+                    <div class="card">
+                  
                     <div>
                          <FaTimes
-                style={{ color: "red", cursor: "pointer" }}
+                style={{ color: "black", cursor: "pointer" }}
                 onClick={() => deleteTableRows(project.name)}
               />
                         <h3> {project.project_name}</h3>
 
                         <div>Start at: {project.start_at}</div>
                         <div>End at:  {project.end_at}</div>
-                        <div><h4>Tasks</h4>
+                        <div><h4 class="taskTitle">Tasks</h4>
                             {projectData.map((pro) => {
                                 if (pro.project_name === project.project_name) return <li>{pro.task_name}</li>
                             })}
 
                         </div>
-                        <div> <button>Done</button></div>
+                        <div  > <button className="doneButton" >Done</button></div>
                         
+                    </div>
+                    </div>
                     </div>)
             })}
 

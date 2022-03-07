@@ -4,8 +4,10 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import AddProject from "./pages/AddProject";
-// import Project from "./pages/Project";
+import Completed from "./pages/Completed";
+
 function App() {
+  // const [completedProject, setCompletedProject] = useState([]);
   return (
     <BrowserRouter>
       <div className="App">
@@ -15,6 +17,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/m" element={<SignUp />} />
           <Route path="/addProject" element={<AddProject />} />
+          <Route path="/completed" element={<Completed />} />
 
           {/* <Route path="/project" element={<Project />} /> */}
         </Routes>

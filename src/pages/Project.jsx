@@ -7,6 +7,12 @@ function Project() {
     (v, i, a) => a.findIndex((t) => t.id === v.id) === i
   );
 
+  const completedProject = (e) => {
+    projectData.map((comp) => {
+      if (completedProject === true) return <li>{comp.projectData}</li>;
+    });
+  };
+
   const deleteTableRows = (project_name) => {
     setProjectData(
       projectData.filter((obj) => {
@@ -63,7 +69,9 @@ function Project() {
                 </div>
                 <div>
                   {" "}
-                  <button className="doneButton">Done</button>
+                  <button className="doneButton" onClick={completedProject}>
+                    Done
+                  </button>
                 </div>
               </div>
             </div>

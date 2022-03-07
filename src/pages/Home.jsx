@@ -1,11 +1,10 @@
+import React from "react";
 import Project from "./Project";
-// import "//home.css";
 import "../App.css";
-// import { FaPlus } from "react-icons/fa";
 
 function Home(props) {
   return (
-    <div>
+    <div className="homeContainer">
       <nav className="buttons">
         {/* <a id="home" className="homeButton" href="/">Home</a> */}
 
@@ -16,7 +15,7 @@ function Home(props) {
           all projects
         </a>
 
-        <a id="completed" className="completedButton" href="/home">
+        <a id="completed" className="completedButton" href="/completed">
           completed
         </a>
         <a id="uncompleted" className="uncompleted" href="/home">
@@ -24,14 +23,15 @@ function Home(props) {
         </a>
       </nav>
       <h1>Project Management</h1>
-
-      <a href="/addProject">
-        {" "}
-        <img
-          className="addImg"
-          src="https://cdn3.iconfinder.com/data/icons/rcons-file-action/512/add_file-512.png"
-        ></img>
-      </a>
+      <div className="imgStyling">
+        <a href="/addProject">
+          {" "}
+          <img
+            className="addImg"
+            src="https://cdn3.iconfinder.com/data/icons/rcons-file-action/512/add_file-512.png"
+          ></img>
+        </a>
+      </div>
 
       <Project></Project>
     </div>
